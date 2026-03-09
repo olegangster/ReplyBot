@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: tg-userbot-broadcast
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: API_ID
+        value: "23109464"
+      - key: API_HASH
+        value: "2584f34ae96709da342ee85fb2cb176a"
+      - key: BOT_TOKEN
+        sync: false        # вставишь вручную
+      - key: OWNER_ID
+        sync: false        # вставишь вручную
+      - key: SESSION_STRING
+        value: ""          # заполнится после авторизации
+      - key: PORT
+        value: "8080"
+    disk:
+      name: userbot-data
+      mountPath: /opt/render/project/src
+      sizeGB: 1
