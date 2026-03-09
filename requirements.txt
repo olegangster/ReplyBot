@@ -1,8 +1,0 @@
-# NO PYROGRAM - Python 3.14 compatible
-telethon==1.36.0
-pyaes==1.6.1
-cryptg==0.4.0
-APScheduler==3.10.4
-flask==3.0.3
-aiogram==3.7.0
-aiohttp==3.9.5
